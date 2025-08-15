@@ -85,9 +85,6 @@ function App() {
         } else if (err.message.includes('API')) {
           setError('API service error. Please try again in a moment.');
         } else {
-          setResult(parsedResult);
-          playAudioForRipeness(parsedResult.ripeness);
-        } else {
           setError(err.message);
         }
       } else {
