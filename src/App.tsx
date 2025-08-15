@@ -80,7 +80,7 @@ function App() {
       audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/ripe.mp3';
     } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
                ripeness.includes('brown') || ripeness.includes('overripe')) {
-      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/overripe.mp3';
+      audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/overripe.mp3';
     }
 
     if (audioUrl) {
