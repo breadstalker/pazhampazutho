@@ -75,7 +75,7 @@ function App() {
     let audioUrl: string | null = null;
     
     if (ripeness.includes('green') || ripeness.includes('unripe')) {
-      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/unripe.mp3';
+      audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/unripe.mp3';
     } else if (ripeness.includes('yellow') || ripeness.includes('perfect')) {
       audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/ripe.mp3';
     } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
