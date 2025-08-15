@@ -288,8 +288,9 @@ https://drive.google.com/file/d/1KBIjDLquWoq9vrX5waqvQ5yEts9A6HSL/view?usp=drive
 
 Team Contributions
 John Savio Romy: UI/UX designing and prototyping
+
 Ealiyas Shaji: Fullstack development and API integration.
 
 Made with ❤️ at TinkerHub Useless Projects
 
-Static Badge Static Badge
+https://camo.githubusercontent.com/a6af2288021b3c8143967be1e96f69342202f4668d59699394553db0ab955edb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5573656c65737350726f6a656374732d2d32352d32353f6c696e6b3d68747470732533412532462532467777772e74696e6b65726875622e6f72672532466576656e74732532465132513154514b5836512532465573656c657373253235323050726f6a65637473
