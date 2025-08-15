@@ -75,12 +75,12 @@ function App() {
     let audioUrl: string | null = null;
     
     if (ripeness.includes('green') || ripeness.includes('unripe')) {
-      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/unripe.mp3';
+      audioUrl = 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav';
     } else if (ripeness.includes('yellow') || ripeness.includes('perfect')) {
-      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/ripe.mp3';
+      audioUrl = 'https://www.soundjay.com/misc/sounds/success-1.wav';
     } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
                ripeness.includes('brown') || ripeness.includes('overripe')) {
-      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/overripe.mp3';
+      audioUrl = 'https://www.soundjay.com/misc/sounds/fail-buzzer-02.wav';
     }
 
     if (audioUrl) {
