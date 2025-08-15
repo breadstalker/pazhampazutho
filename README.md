@@ -7,9 +7,11 @@ Team Name: North Radiant
 Team Members
 
 Team Lead: John Savio Romy - Toc-H Institute of Science and Technology 
+
 Member 2: Ealiyas Shaji - Toc-H Institute of Science and Technology
 
 Project Description
+
 An innovative tool that helps determine the ripeness of a banana with a fun touch.
 
 The Problem (that doesn't exist)
@@ -265,6 +267,29 @@ If you encounter any issues or have questions:
 ---
 
 Screenshots:
+
 https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074312.png
 
+https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074332.png
+
+https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074419.png
+
+https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM%20(1).jpeg
+
+https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM.jpeg
+
+https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.06%20AM.jpeg
+
+Video:
+
+https://drive.google.com/file/d/1KBIjDLquWoq9vrX5waqvQ5yEts9A6HSL/view?usp=drivesdk
+
 *PazhamPazhutho - Because every banana deserves the perfect timing!*
+
+Team Contributions
+John Savio Romy: UI/UX designing and prototyping
+Ealiyas Shaji: Fullstack development and API integration.
+
+Made with ❤️ at TinkerHub Useless Projects
+
+Static Badge Static Badge
