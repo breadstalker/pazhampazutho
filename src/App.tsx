@@ -39,7 +39,7 @@ function App() {
               },
               {
                 inline_data: {
-                  mime_type: "image/jpeg",
+                  mime_type: imageBase64.startsWith('data:image/png') ? "image/png" : "image/jpeg",
                   data: imageBase64.split(',')[1]
                 }
               }
@@ -48,24 +48,51 @@ function App() {
         })
       });
 
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+      }
+
       const data = await response.json();
       
       if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
         const resultText = data.candidates[0].content.parts[0].text;
         // Extract JSON from the response
-        const jsonMatch = resultText.match(/\{[\s\S]*\}/);
+        const jsonMatch = resultText.match(/\{[\s\S]*?\}/);
         if (jsonMatch) {
-          const parsedResult = JSON.parse(jsonMatch[0]);
+          try {
+            const parsedResult = JSON.parse(jsonMatch[0]);
+            if (!parsedResult.ripeness || !parsedResult.confidence || !parsedResult.description) {
+              throw new Error('Invalid response format');
+            }
+            setResult(parsedResult);
+            playAudioForRipeness(parsedResult.ripeness);
+          } catch (parseError) {
+            throw new Error('Could not parse analysis result');
+          }
+        } else {
+          throw new Error('Could not find JSON in response');
+        }
+      } else if (data.error) {
+        throw new Error(`API Error: ${data.error.message || 'Unknown API error'}`);
+      } else {
+        throw new Error('No analysis result received from API');
+      }
+    } catch (err) {
+      console.error('Analysis error:', err);
+      if (err instanceof Error) {
+        if (err.message.includes('fetch')) {
+          setError('Network error. Please check your internet connection and try again.');
+        } else if (err.message.includes('API')) {
+          setError('API service error. Please try again in a moment.');
+        } else {
           setResult(parsedResult);
           playAudioForRipeness(parsedResult.ripeness);
         } else {
-          throw new Error('Could not parse analysis result');
+          setError(err.message);
         }
       } else {
-        throw new Error('No analysis result received');
+        setError('An unexpected error occurred. Please try again.');
       }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to analyze image');
     } finally {
       setIsAnalyzing(false);
     }
@@ -85,8 +112,16 @@ function App() {
 
     if (audioUrl) {
       const audio = new Audio(audioUrl);
+      audio.preload = 'auto';
+      audio.volume = 0.7;
       audio.play().catch(error => {
         console.error('Audio playback failed:', error);
+        // Fallback: try to play with user interaction
+        document.addEventListener('click', () => {
+          audio.play().catch(() => {
+            console.log('Audio still failed after user interaction');
+          });
+        }, { once: true });
       });
     }
   };
