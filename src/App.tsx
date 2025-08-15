@@ -89,22 +89,6 @@ function App() {
         console.error('Audio playback failed:', error);
       });
     }
-    
-    if (ripeness.includes('green') || ripeness.includes('unripe')) {
-      audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/unripe.mp3';
-    } else if (ripeness.includes('yellow') || ripeness.includes('perfect')) {
-      audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/ripe.mp3';
-    } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
-               ripeness.includes('brown') || ripeness.includes('overripe')) {
-      audioUrl = 'https://github.com/breadstalker/pazhampazutho/blob/main/overripe.mp3';
-    }
-
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.play().catch(error => {
-        console.error('Audio playback failed:', error);
-      });
-    }
   };
 
   const handleFileSelect = (file: File) => {
