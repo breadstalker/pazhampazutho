@@ -56,31 +56,37 @@ function App() {
       
       if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
         const resultText = data.candidates[0].content.parts[0].text;
+        console.log('API Response:', resultText);
+        
         // Extract JSON from the response
         const jsonMatch = resultText.match(/\{[\s\S]*?\}/);
         if (jsonMatch) {
           try {
             const parsedResult = JSON.parse(jsonMatch[0]);
-            if (!parsedResult.ripeness || !parsedResult.confidence || !parsedResult.description) {
-              throw new Error('Invalid response format');
+            if (parsedResult.ripeness && parsedResult.confidence && parsedResult.description) {
+              setResult(parsedResult);
+              playAudioForRipeness(parsedResult.ripeness);
+            } else {
+              throw new Error('Invalid response format - missing required fields');
             }
-            setResult(parsedResult);
-            playAudioForRipeness(parsedResult.ripeness);
           } catch (parseError) {
+            console.error('Parse error:', parseError);
             throw new Error('Could not parse analysis result');
           }
         } else {
+          console.error('No JSON found in response:', resultText);
           throw new Error('Could not find JSON in response');
         }
       } else if (data.error) {
         throw new Error(`API Error: ${data.error.message || 'Unknown API error'}`);
       } else {
+        console.error('Unexpected API response structure:', data);
         throw new Error('No analysis result received from API');
       }
     } catch (err) {
       console.error('Analysis error:', err);
       if (err instanceof Error) {
-        if (err.message.includes('fetch')) {
+        if (err.message.includes('fetch') || err.message.includes('NetworkError')) {
           setError('Network error. Please check your internet connection and try again.');
         } else if (err.message.includes('API')) {
           setError('API service error. Please try again in a moment.');
@@ -184,7 +190,7 @@ function App() {
             <Banana className="h-12 w-12 text-yellow-600 animate-pulse" />
           </div>
           <p className="text-xl text-gray-700 font-medium">
-            Lets  analyze your BANANAAAAA! 🔥
+            Lets analyze your BANANAAAAA! 🔥
           </p>
         </div>
 
@@ -285,6 +291,14 @@ function App() {
                     <h3 className={`text-3xl font-bold ${getRipenessColor(result.ripeness)} capitalize`}>
                       {result.ripeness}
                     </h3>
+                    <div className="mt-4 p-4 bg-gray-50 rounded-xl">
+                      <p className="text-lg font-semibold text-gray-800 mb-2">
+                        Confidence: {result.confidence}%
+                      </p>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {result.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
