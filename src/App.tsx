@@ -72,7 +72,23 @@ function App() {
   };
 
   const playAudioForRipeness = (ripeness: string) => {
-    // Audio functionality removed to avoid CORS issues
+    let audioUrl: string | null = null;
+    
+    if (ripeness.includes('green') || ripeness.includes('unripe')) {
+      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/unripe.mp3';
+    } else if (ripeness.includes('yellow') || ripeness.includes('perfect')) {
+      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/ripe.mp3';
+    } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
+               ripeness.includes('brown') || ripeness.includes('overripe')) {
+      audioUrl = 'https://raw.githubusercontent.com/ealiyasshaji/PazhamPazhutho-/854bb59a9ed050145c10f89f949a77f717741ec0/overripe.mp3';
+    }
+
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.play().catch(error => {
+        console.error('Audio playback failed:', error);
+      });
+    }
   };
 
   const handleFileSelect = (file: File) => {
