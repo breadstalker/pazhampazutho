@@ -264,4 +264,7 @@ If you encounter any issues or have questions:
 
 ---
 
+Screenshots:
+https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074312.png
+
 *PazhamPazhutho - Because every banana deserves the perfect timing!*
