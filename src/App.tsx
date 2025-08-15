@@ -21,7 +21,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAsyUMnls1LfXltlCn-rlk9sGKbG2XmPbU`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key= AIzaSyAsyUMnls1LfXltlCn-rlk9sGKbG2XmPbU`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
