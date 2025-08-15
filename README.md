@@ -268,21 +268,21 @@ If you encounter any issues or have questions:
 
 Screenshots:
 
-[laptop interface1](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074312.png)
+![laptop interface1](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074312.png)
 
-[laptop_interface2](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074332.png)
+![laptop_interface2](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074332.png)
 
-[laptop interface3](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074419.png)
+![laptop interface3](https://github.com/breadstalker/pazhampazutho/blob/main/Screenshot%202025-08-15%20074419.png)
 
-[mobile_interface1](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM%20(1).jpeg)
+![mobile_interface1](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM%20(1).jpeg)
 
-[mobile_interface2](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM.jpeg)
+![mobile_interface2](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.05%20AM.jpeg)
 
-[mobile_interface3](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.06%20AM.jpeg)
+![mobile_interface3](https://github.com/breadstalker/pazhampazutho/blob/main/WhatsApp%20Image%202025-08-15%20at%207.47.06%20AM.jpeg)
 
 Video:
 
-[video_walk_through](https://drive.google.com/file/d/1KBIjDLquWoq9vrX5waqvQ5yEts9A6HSL/view?usp=drivesdk)
+![video_walk_through](https://drive.google.com/file/d/1KBIjDLquWoq9vrX5waqvQ5yEts9A6HSL/view?usp=drivesdk)
 *PazhamPazhutho - Because every banana deserves the perfect timing!*
 
 Team Contributions
@@ -293,4 +293,4 @@ Ealiyas Shaji: Fullstack development and API integration.
 
 Made with ❤️ at TinkerHub Useless Projects
 
-[static_badge](https://camo.githubusercontent.com/a6af2288021b3c8143967be1e96f69342202f4668d59699394553db0ab955edb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5573656c65737350726f6a656374732d2d32352d32353f6c696e6b3d68747470732533412532462532467777772e74696e6b65726875622e6f72672532466576656e74732532465132513154514b5836512532465573656c657373253235323050726f6a65637473)
+![static_badge](https://camo.githubusercontent.com/a6af2288021b3c8143967be1e96f69342202f4668d59699394553db0ab955edb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5573656c65737350726f6a656374732d2d32352d32353f6c696e6b3d68747470732533412532462532467777772e74696e6b65726875622e6f72672532466576656e74732532465132513154514b5836512532465573656c657373253235323050726f6a65637473)
