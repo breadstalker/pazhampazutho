@@ -72,23 +72,7 @@ function App() {
   };
 
   const playAudioForRipeness = (ripeness: string) => {
-    let audioUrl: string | null = null;
-    
-    if (ripeness.includes('green') || ripeness.includes('unripe')) {
-      audioUrl = 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav';
-    } else if (ripeness.includes('yellow') || ripeness.includes('perfect')) {
-      audioUrl = 'https://www.soundjay.com/misc/sounds/success-1.wav';
-    } else if (ripeness.includes('spotted') || ripeness.includes('very ripe') || 
-               ripeness.includes('brown') || ripeness.includes('overripe')) {
-      audioUrl = 'https://www.soundjay.com/misc/sounds/fail-buzzer-02.wav';
-    }
-
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.play().catch(error => {
-        console.error('Audio playback failed:', error);
-      });
-    }
+    // Audio functionality removed to avoid CORS issues
   };
 
   const handleFileSelect = (file: File) => {
